@@ -13,11 +13,11 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Main extends JavaPlugin implements Listener {
 
-    private static me.wm.id.ro.Main instance;
+    private static Main instance;
     private static NMS nms;
     private boolean approve = true;
 
-    public static me.wm.id.ro.Main getInstance() {
+    public static Main getInstance() {
         return instance;
     }
 
