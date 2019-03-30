@@ -1,0 +1,5 @@
+name: Hybrid
+main: me.wm.hybrid.ro.Bungee.Main
+version: ${project.version}
+description: Mede with LOVE for Hybrid Network
+author: [WaffleMast3r]
