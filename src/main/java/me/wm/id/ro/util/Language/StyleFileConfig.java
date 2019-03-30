@@ -1,14 +1,14 @@
-package me.wm.hybrid.ro.util.Language;
+package me.wm.id.ro.util.Language;
 
-import me.wm.hybrid.ro.util.ConfigManager;
-import me.wm.hybrid.ro.util.Language.CustomMessage.CustomMessage;
-import me.wm.hybrid.ro.util.Language.CustomMessage.CustomMessageContents;
-import me.wm.hybrid.ro.util.StyleFileTemplate;
-import me.wm.hybrid.ro.util.files.Config;
-import me.wm.hybrid.ro.util.gui.CustomFillItem;
-import me.wm.hybrid.ro.util.gui.CustomItem;
-import me.wm.hybrid.ro.util.gui.GUIContents;
-import me.wm.hybrid.ro.util.scoreboard.ScoreBoardContents;
+import me.wm.id.ro.util.ConfigManager;
+import me.wm.id.ro.util.Language.CustomMessage.CustomMessage;
+import me.wm.id.ro.util.Language.CustomMessage.CustomMessageContents;
+import me.wm.id.ro.util.StyleFileTemplate;
+import me.wm.id.ro.util.files.Config;
+import me.wm.id.ro.util.gui.CustomFillItem;
+import me.wm.id.ro.util.gui.CustomItem;
+import me.wm.id.ro.util.gui.GUIContents;
+import me.wm.id.ro.util.scoreboard.ScoreBoardContents;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.ComponentBuilder;
 import net.md_5.bungee.api.chat.HoverEvent;

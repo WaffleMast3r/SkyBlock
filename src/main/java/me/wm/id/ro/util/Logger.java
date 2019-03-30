@@ -1,6 +1,6 @@
-package me.wm.hybrid.ro.util;
+package me.wm.id.ro.util;
 
-import me.wm.hybrid.ro.util.files.Config;
+import me.wm.id.ro.util.files.Config;
 import org.bukkit.Bukkit;
 
 public class Logger {

@@ -1,10 +1,10 @@
 package me.wm.id.ro;
 
-import me.wm.hybrid.ro.util.Language.LanguageManager;
-import me.wm.hybrid.ro.util.Logger;
-import me.wm.hybrid.ro.util.NMS.NMS;
-import me.wm.hybrid.ro.util.NMS.Versions.v1_12_R1;
-import me.wm.hybrid.ro.util.Updater.TaskManager;
+import me.wm.id.ro.util.Language.LanguageManager;
+import me.wm.id.ro.util.Logger;
+import me.wm.id.ro.util.NMS.NMS;
+import me.wm.id.ro.util.NMS.Versions.v1_12_R1;
+import me.wm.id.ro.util.Updater.TaskManager;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

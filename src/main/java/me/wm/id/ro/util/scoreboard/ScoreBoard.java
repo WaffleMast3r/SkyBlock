@@ -1,8 +1,8 @@
-package me.wm.hybrid.ro.util.scoreboard;
+package me.wm.id.ro.util.scoreboard;
 
-import me.wm.hybrid.ro.util.Language.LanguageManager;
-import me.wm.hybrid.ro.util.Language.LanguageUpdateEvent;
-import me.wm.hybrid.ro.util.Logger;
+import me.wm.id.ro.util.Language.LanguageManager;
+import me.wm.id.ro.util.Language.LanguageUpdateEvent;
+import me.wm.id.ro.util.Logger;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

@@ -1,6 +1,6 @@
-package me.wm.hybrid.ro.util.database;
+package me.wm.id.ro.util.database;
 
-import me.wm.hybrid.ro.util.Logger;
+import me.wm.id.ro.util.Logger;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.sql.*;

@@ -1,4 +1,4 @@
-package me.wm.hybrid.ro.util.Language.CustomMessage;
+package me.wm.id.ro.util.Language.CustomMessage;
 
 import java.util.ArrayList;
 

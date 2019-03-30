@@ -1,9 +1,9 @@
-package me.wm.hybrid.ro.util.Language;
+package me.wm.id.ro.util.Language;
 
 
 
-import me.wm.hybrid.ro.util.ConfigManager;
-import me.wm.hybrid.ro.util.files.Config;
+import me.wm.id.ro.util.ConfigManager;
+import me.wm.id.ro.util.files.Config;
 
 import java.io.File;
 

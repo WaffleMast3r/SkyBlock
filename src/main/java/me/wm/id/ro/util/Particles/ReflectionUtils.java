@@ -1,4 +1,4 @@
-package me.wm.hybrid.ro.util.Particles;
+package me.wm.id.ro.util.Particles;
 
 import org.bukkit.Bukkit;
 

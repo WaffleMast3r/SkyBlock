@@ -1,4 +1,4 @@
-package me.wm.hybrid.ro.util.NMS;
+package me.wm.id.ro.util.NMS;
 
 import org.bukkit.command.Command;
 import org.bukkit.entity.Player;

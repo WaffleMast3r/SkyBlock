@@ -1,9 +1,9 @@
-package me.wm.hybrid.ro.util.gui;
+package me.wm.id.ro.util.gui;
 
-import me.wm.hybrid.ro.util.Language.LanguageManager;
-import me.wm.hybrid.ro.util.Logger;
-import me.wm.hybrid.ro.util.Updater.UpdateEvent;
-import me.wm.hybrid.ro.util.Updater.UpdateTime;
+import me.wm.id.ro.util.Language.LanguageManager;
+import me.wm.id.ro.util.Logger;
+import me.wm.id.ro.util.Updater.UpdateEvent;
+import me.wm.id.ro.util.Updater.UpdateTime;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

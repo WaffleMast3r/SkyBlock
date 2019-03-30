@@ -1,6 +1,6 @@
-package me.wm.hybrid.ro.util.database;
+package me.wm.id.ro.util.database;
 
-import me.wm.hybrid.ro.util.ConfigManager;
+import me.wm.id.ro.util.ConfigManager;
 
 public class MySQLSettings {
 

@@ -1,7 +1,7 @@
-package me.wm.hybrid.ro.util.gui;
+package me.wm.id.ro.util.gui;
 
-import me.wm.hybrid.ro.util.Language.LanguageManager;
-import me.wm.hybrid.ro.util.Logger;
+import me.wm.id.ro.util.Language.LanguageManager;
+import me.wm.id.ro.util.Logger;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;

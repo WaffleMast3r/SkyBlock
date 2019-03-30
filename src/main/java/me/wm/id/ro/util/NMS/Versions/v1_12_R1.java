@@ -1,9 +1,9 @@
-package me.wm.hybrid.ro.util.NMS.Versions;
+package me.wm.id.ro.util.NMS.Versions;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
-import me.wm.hybrid.ro.util.Logger;
-import me.wm.hybrid.ro.util.NMS.NMS;
+import me.wm.id.ro.util.Logger;
+import me.wm.id.ro.util.NMS.NMS;
 import net.minecraft.server.v1_12_R1.*;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;

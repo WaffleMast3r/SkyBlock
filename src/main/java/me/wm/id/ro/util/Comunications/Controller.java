@@ -1,4 +1,4 @@
-package me.wm.hybrid.ro.util.Comunications;
+package me.wm.id.ro.util.Comunications;
 
 import com.google.common.collect.Iterables;
 import com.google.common.io.ByteArrayDataInput;

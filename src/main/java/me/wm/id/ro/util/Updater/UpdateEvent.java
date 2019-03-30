@@ -1,4 +1,4 @@
-package me.wm.hybrid.ro.util.Updater;
+package me.wm.id.ro.util.Updater;
 
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;

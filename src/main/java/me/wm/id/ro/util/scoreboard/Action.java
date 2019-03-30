@@ -1,4 +1,4 @@
-package me.wm.hybrid.ro.util.scoreboard;
+package me.wm.id.ro.util.scoreboard;
 
 public interface Action {
 

@@ -1,6 +1,6 @@
-package me.wm.hybrid.ro.util.Updater;
+package me.wm.id.ro.util.Updater;
 
-import me.wm.hybrid.ro.util.Logger;
+import me.wm.id.ro.util.Logger;
 import org.bukkit.Bukkit;
 
 public class TaskManager {

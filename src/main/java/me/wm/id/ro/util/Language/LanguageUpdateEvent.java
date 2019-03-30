@@ -1,4 +1,4 @@
-package me.wm.hybrid.ro.util.Language;
+package me.wm.id.ro.util.Language;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;

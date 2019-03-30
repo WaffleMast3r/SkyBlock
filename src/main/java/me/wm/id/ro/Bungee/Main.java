@@ -1,4 +1,4 @@
-package me.wm.hybrid.ro.Bungee;
+package me.wm.id.ro.Bungee;
 
 import net.md_5.bungee.api.plugin.Plugin;
 

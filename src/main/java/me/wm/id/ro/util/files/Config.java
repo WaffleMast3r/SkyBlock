@@ -1,6 +1,6 @@
-package me.wm.hybrid.ro.util.files;
+package me.wm.id.ro.util.files;
 
-import me.wm.hybrid.ro.util.ConfigManager;
+import me.wm.id.ro.util.ConfigManager;
 
 public class Config {
 

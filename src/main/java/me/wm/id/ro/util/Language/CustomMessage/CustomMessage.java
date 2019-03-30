@@ -1,6 +1,6 @@
-package me.wm.hybrid.ro.util.Language.CustomMessage;
+package me.wm.id.ro.util.Language.CustomMessage;
 
-import me.wm.hybrid.ro.util.Language.LanguageManager;
+import me.wm.id.ro.util.Language.LanguageManager;
 import net.md_5.bungee.api.chat.*;
 import org.bukkit.entity.Player;
 

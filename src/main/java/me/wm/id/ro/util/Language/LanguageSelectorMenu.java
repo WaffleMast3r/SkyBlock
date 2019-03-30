@@ -1,6 +1,6 @@
-package me.wm.hybrid.ro.util.Language;
+package me.wm.id.ro.util.Language;
 
-import me.wm.hybrid.ro.util.gui.*;
+import me.wm.id.ro.util.gui.*;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;

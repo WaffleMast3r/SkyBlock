@@ -1,4 +1,4 @@
-package me.wm.hybrid.ro.util;
+package me.wm.id.ro.util;
 
 import org.apache.commons.io.IOUtils;
 import org.bukkit.configuration.InvalidConfigurationException;

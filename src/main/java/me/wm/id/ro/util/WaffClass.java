@@ -1,8 +1,8 @@
-package me.wm.hybrid.ro.util;
+package me.wm.id.ro.util;
 
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
-import me.wm.hybrid.ro.util.files.Config;
+import me.wm.id.ro.util.files.Config;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;

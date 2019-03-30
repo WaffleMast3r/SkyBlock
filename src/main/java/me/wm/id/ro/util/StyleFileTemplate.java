@@ -1,11 +1,11 @@
-package me.wm.hybrid.ro.util;
+package me.wm.id.ro.util;
 
-import me.wm.hybrid.ro.util.Language.CustomMessage.CustomMessage;
-import me.wm.hybrid.ro.util.Language.CustomMessage.CustomMessageContents;
-import me.wm.hybrid.ro.util.gui.CustomFillItem;
-import me.wm.hybrid.ro.util.gui.CustomItem;
-import me.wm.hybrid.ro.util.gui.GUIContents;
-import me.wm.hybrid.ro.util.scoreboard.ScoreBoardContents;
+import me.wm.id.ro.util.Language.CustomMessage.CustomMessage;
+import me.wm.id.ro.util.Language.CustomMessage.CustomMessageContents;
+import me.wm.id.ro.util.gui.CustomFillItem;
+import me.wm.id.ro.util.gui.CustomItem;
+import me.wm.id.ro.util.gui.GUIContents;
+import me.wm.id.ro.util.scoreboard.ScoreBoardContents;
 import org.bukkit.Material;
 
 import java.util.ArrayList;

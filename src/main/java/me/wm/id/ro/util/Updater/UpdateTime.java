@@ -1,4 +1,4 @@
-package me.wm.hybrid.ro.util.Updater;
+package me.wm.id.ro.util.Updater;
 
 public enum UpdateTime {
     TICK1(1L), SECOND(20L), MINUTE(1200L);
