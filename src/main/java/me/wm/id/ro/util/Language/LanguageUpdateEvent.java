@@ -7,7 +7,6 @@ import org.bukkit.event.HandlerList;
 public class LanguageUpdateEvent extends Event {
 
     private static final HandlerList handlerList = new HandlerList();
-
     private Player player;
 
     public LanguageUpdateEvent(Player player) {

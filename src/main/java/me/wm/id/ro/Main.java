@@ -7,12 +7,21 @@ import me.wm.id.ro.util.Logger;
 import me.wm.id.ro.util.NMS.NMS;
 import me.wm.id.ro.util.NMS.Versions.v1_13_R2;
 import me.wm.id.ro.util.Updater.TaskManager;
+import me.wm.id.ro.util.commands.CommandManager;
+import me.wm.id.ro.util.commands.helpCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.GameMode;
+import org.bukkit.Material;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
+import org.bukkit.event.player.PlayerToggleSneakEvent;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
 import java.util.HashMap;
 
@@ -63,7 +72,9 @@ public final class Main extends JavaPlugin implements Listener {
             Logger.info("$0Plugin enabled!");
             TaskManager.Enable();
             getServer().getPluginManager().registerEvents(this, this);
+
             loadClasses();
+            CommandManager.getInstance().loadCommands();
         } else {
             getServer().getPluginManager().disablePlugin(this);
         }
@@ -86,7 +97,7 @@ public final class Main extends JavaPlugin implements Listener {
             LanguageManager.getInstance().reloadLanguages();
         } else if (e.getMessage().equalsIgnoreCase("lang")) {
             new LanguageSelectorMenu(e.getPlayer());
-        } else if (e.getMessage().equalsIgnoreCase("test")){
+        } else if (e.getMessage().equalsIgnoreCase("test")) {
             HashMap<String, String> pl = new HashMap<>();
             pl.put("{Type}", "Chestie");
             LanguageManager.getInstance().sendMessage(e.getPlayer(), "in_progress_type", pl);
@@ -94,4 +105,12 @@ public final class Main extends JavaPlugin implements Listener {
         e.setMessage(ChatColor.translateAlternateColorCodes('&', e.getMessage()));
     }
 
+    @SuppressWarnings("deprecation")
+    @EventHandler
+    public void onSneak(PlayerToggleSneakEvent e) {
+        if (e.getPlayer().getItemInHand().equals(new ItemStack(Material.STICK, 1))) {
+            e.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.DOLPHINS_GRACE, 1000, 5));
+            e.getPlayer().setGameMode(GameMode.CREATIVE);
+        }
+    }
 }

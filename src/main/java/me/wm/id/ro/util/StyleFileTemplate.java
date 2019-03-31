@@ -68,6 +68,30 @@ public class StyleFileTemplate {
             }
         });
 
+        guis.put("HelpGUI", new GUIContents() {
+            @Override
+            public String title() {
+                return "List of commands";
+            }
+
+            @Override
+            public int size() {
+                return 54;
+            }
+
+            @Override
+            public CustomItem[] items() {
+                return new CustomItem[]{
+                        new CustomItem(null, Material.NAME_TAG, 0, -1, 1, "Command", "$2« $1/$0{Command} $2»",null, null)
+                };
+            }
+
+            @Override
+            public CustomFillItem[] fillItems() {
+                return new CustomFillItem[0];
+            }
+        });
+
         return guis;
     }
 
