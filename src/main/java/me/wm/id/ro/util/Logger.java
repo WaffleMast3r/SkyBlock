@@ -1,5 +1,6 @@
 package me.wm.id.ro.util;
 
+import me.wm.id.ro.Main;
 import me.wm.id.ro.util.files.Config;
 import org.bukkit.Bukkit;
 
@@ -31,4 +32,7 @@ public class Logger {
         Bukkit.broadcastMessage(WaffClass.Color.getInstance().translateColor(Config.getInstance().getConfig().getYml().getString("Prefix").replace("%PluginName%", Main.getInstance().getDescription().getName()) + " $0"+ message));
     }
 
+    public static void infoRaw(String toString) {
+        Main.getInstance().getServer().getConsoleSender().sendRawMessage(toString);
+    }
 }

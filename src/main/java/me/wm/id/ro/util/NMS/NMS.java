@@ -16,6 +16,4 @@ public interface NMS {
 
     void openBook(Player p, ItemStack book);
 
-    void setNameTag(Player p, String name);
-
 }

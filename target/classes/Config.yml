@@ -1,0 +1,32 @@
+defaultLanguage: en
+
+#This prefix is for console logs
+Prefix: "$4[$0%PluginName%$4] $2\xbb"
+
+ColorCharacter: "$"
+PluginColors:
+- '5' #0
+- 'd' #1
+- '7' #2
+- '8' #3
+- 'f' #4
+- 'l' #5
+- 'm' #6
+
+#Setup the MySQL
+MySQL:
+  host: "localhost"
+  port: "3306"
+  user: "root"
+  pass: "magiciamuie69"
+  name: "Hybrid"
+  pref: "hybrid_"
+
+#Set here the absolute path of BungeeCord directory
+BungeeCord_Directory: "/root/McServers/BungeeCord"
+
+#Set here the path from plugin folder where Things are stored :D
+Spigot_Version_Directory: "Spigot/Versions"
+Spigot_Plugins_Directory: "Spigot/Plugins"
+Spigot_Servers_Directory: "Spigot/Servers"
+Spigot_Template_Directory: "Spigot/Template"

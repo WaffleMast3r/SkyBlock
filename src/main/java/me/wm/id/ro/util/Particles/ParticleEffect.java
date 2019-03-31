@@ -41,6 +41,7 @@ import java.util.Map.Entry;
  * @author DarkBlade12
  * @version 1.7
  */
+@SuppressWarnings("deprecation")
 public enum ParticleEffect {
     /**
      * A particle effect which is displayed by exploding tnt and creepers:
@@ -453,7 +454,7 @@ public enum ParticleEffect {
      */
     private static boolean isWater(Location location) {
         Material material = location.getBlock().getType();
-        return material == Material.WATER || material == Material.STATIONARY_WATER;
+        return material == Material.WATER || material == Material.LEGACY_STATIONARY_WATER;
     }
 
     /**

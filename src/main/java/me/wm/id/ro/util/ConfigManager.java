@@ -1,5 +1,6 @@
 package me.wm.id.ro.util;
 
+import me.wm.id.ro.Main;
 import org.apache.commons.io.IOUtils;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;

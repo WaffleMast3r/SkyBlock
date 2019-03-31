@@ -1,5 +1,6 @@
 package me.wm.id.ro.util.database;
 
+import me.wm.id.ro.Main;
 import me.wm.id.ro.util.Logger;
 import org.bukkit.scheduler.BukkitRunnable;
 

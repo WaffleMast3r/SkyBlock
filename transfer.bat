@@ -1,0 +1,1 @@
+pscp.exe -pw OBLS OceanBlock.jar root@razvan-dev.go.ro:/root/OceanBlock/plugins/

@@ -1,6 +1,7 @@
 package me.wm.id.ro.util.Language.CustomMessage;
 
 import me.wm.id.ro.util.Language.LanguageManager;
+import me.wm.id.ro.util.Logger;
 import net.md_5.bungee.api.chat.*;
 import org.bukkit.entity.Player;
 
@@ -11,6 +12,7 @@ public class CustomMessage {
     private Player p;
     private CustomMessageContents contents;
     private HashMap<String, String> placeholders;
+    private String textAfter;
 
     public CustomMessage(Player p, CustomMessageContents contents) {
         this.p = p;
@@ -82,7 +84,6 @@ public class CustomMessage {
                 cb = process;
             }
         }
-
         return cb.create();
     }
 

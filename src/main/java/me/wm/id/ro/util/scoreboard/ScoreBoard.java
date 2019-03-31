@@ -1,5 +1,6 @@
 package me.wm.id.ro.util.scoreboard;
 
+import me.wm.id.ro.Main;
 import me.wm.id.ro.util.Language.LanguageManager;
 import me.wm.id.ro.util.Language.LanguageUpdateEvent;
 import me.wm.id.ro.util.Logger;

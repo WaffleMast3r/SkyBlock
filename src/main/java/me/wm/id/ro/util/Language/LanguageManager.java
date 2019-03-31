@@ -1,5 +1,7 @@
 package me.wm.id.ro.util.Language;
 
+import me.wm.id.ro.Main;
+import me.wm.id.ro.util.Logger;
 import me.wm.id.ro.util.database.Database;
 import me.wm.id.ro.util.files.Config;
 import org.bukkit.Bukkit;

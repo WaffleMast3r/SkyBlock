@@ -2,6 +2,7 @@ package me.wm.id.ro.util.Language;
 
 
 
+import me.wm.id.ro.Main;
 import me.wm.id.ro.util.ConfigManager;
 import me.wm.id.ro.util.files.Config;
 

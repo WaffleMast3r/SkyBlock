@@ -1,15 +1,20 @@
 package me.wm.id.ro;
 
+import me.wm.id.ro.Chat.Formatting;
 import me.wm.id.ro.util.Language.LanguageManager;
+import me.wm.id.ro.util.Language.LanguageSelectorMenu;
 import me.wm.id.ro.util.Logger;
 import me.wm.id.ro.util.NMS.NMS;
-import me.wm.id.ro.util.NMS.Versions.v1_12_R1;
+import me.wm.id.ro.util.NMS.Versions.v1_13_R2;
 import me.wm.id.ro.util.Updater.TaskManager;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.HashMap;
 
 public final class Main extends JavaPlugin implements Listener {
 
@@ -31,8 +36,8 @@ public final class Main extends JavaPlugin implements Listener {
         instance = this;
         String version = Bukkit.getServer().getClass().getName().split("\\.")[3];
         switch (version) {
-            case "v1_12_R1":
-                nms = new v1_12_R1();
+            case "v1_13_R2":
+                nms = new v1_13_R2();
                 Logger.info("$0Version Accepted! $2version: $1" + version);
                 break;
             default:
@@ -47,20 +52,25 @@ public final class Main extends JavaPlugin implements Listener {
     public void onEnable() {
         if (approve) {
             instance = this;
-            if (!me.wm.id.ro.Main.getInstance().getServer().getPluginManager().isPluginEnabled("MVdWPlaceholderAPI")) {
-                Logger.error("Cannot find the plugin $1PlaceholderAPI!");
-                Logger.error("Disabling the plugin!");
-                approve = false;
-                getServer().getPluginManager().disablePlugin(this);
-                return;
-            }
+//            if (!me.wm.id.ro.Main.getInstance().getServer().getPluginManager().isPluginEnabled("MVdWPlaceholderAPI")) {
+//                Logger.error("Cannot find the plugin $1PlaceholderAPI!");
+//                Logger.error("Disabling the plugin!");
+//                approve = false;
+//                getServer().getPluginManager().disablePlugin(this);
+//                return;
+//            }
             LanguageManager.getInstance().loadLanguages();
             Logger.info("$0Plugin enabled!");
             TaskManager.Enable();
             getServer().getPluginManager().registerEvents(this, this);
+            loadClasses();
         } else {
             getServer().getPluginManager().disablePlugin(this);
         }
+    }
+
+    private void loadClasses() {
+        new Formatting();
     }
 
     @Override
@@ -74,9 +84,14 @@ public final class Main extends JavaPlugin implements Listener {
     public void onChat(AsyncPlayerChatEvent e) {
         if (e.getMessage().equalsIgnoreCase("reload")) {
             LanguageManager.getInstance().reloadLanguages();
-        } else if (e.getMessage().equalsIgnoreCase("test")) {
-
+        } else if (e.getMessage().equalsIgnoreCase("lang")) {
+            new LanguageSelectorMenu(e.getPlayer());
+        } else if (e.getMessage().equalsIgnoreCase("test")){
+            HashMap<String, String> pl = new HashMap<>();
+            pl.put("{Type}", "Chestie");
+            LanguageManager.getInstance().sendMessage(e.getPlayer(), "in_progress_type", pl);
         }
+        e.setMessage(ChatColor.translateAlternateColorCodes('&', e.getMessage()));
     }
 
 }
