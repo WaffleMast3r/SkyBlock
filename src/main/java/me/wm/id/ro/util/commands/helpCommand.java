@@ -10,7 +10,7 @@ import java.util.Collections;
 public class helpCommand extends EasyCommand {
 
     public helpCommand() {
-        super("help", "type /help to get some help", "/<command>", Collections.emptyList());
+        super("help", "","type /help to get some help", "/<command>", Collections.emptyList());
         setOnlyPlayer(true);
     }
 

@@ -10,14 +10,16 @@ import java.util.List;
 public abstract class EasyCommand extends BukkitCommand {
 
     private String command;
+    private String permission;
     private String description;
     private String usage;
     private List<String> aliasses;
     private boolean onlyPlayer;
 
-    public EasyCommand(String command, String description, String usage, List<String> aliasses) {
+    public EasyCommand(String command, String permission, String description, String usage, List<String> aliasses) {
         super(command, description, usage, aliasses);
         this.command = command;
+        this.permission = permission;
         this.description = description;
         this.usage = usage;
         this.aliasses = aliasses;
@@ -29,8 +31,11 @@ public abstract class EasyCommand extends BukkitCommand {
     }
 
     public abstract void run(CommandSender p, String[] args);
+
     public abstract boolean validate(String[] args);
+
     public abstract void incorrectUsage(CommandSender p);
+
     public abstract void noPermission(CommandSender p);
 
     @Override
@@ -38,7 +43,11 @@ public abstract class EasyCommand extends BukkitCommand {
         if (onlyPlayer) {
             if (sender instanceof Player) {
                 if (validate(args)) {
-                    run(sender, args);
+                    if (sender.hasPermission(permission)) {
+                        run(sender, args);
+                    } else {
+                        noPermission(sender);
+                    }
                 } else {
                     incorrectUsage(sender);
                     return true;

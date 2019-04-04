@@ -7,13 +7,13 @@ import me.wm.id.ro.util.Logger;
 import me.wm.id.ro.util.NMS.NMS;
 import me.wm.id.ro.util.NMS.Versions.v1_13_R2;
 import me.wm.id.ro.util.Updater.TaskManager;
+import me.wm.id.ro.util.Updater.UpdateEvent;
+import me.wm.id.ro.util.Updater.UpdateTime;
 import me.wm.id.ro.util.commands.CommandManager;
-import me.wm.id.ro.util.commands.helpCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
@@ -105,12 +105,13 @@ public final class Main extends JavaPlugin implements Listener {
         e.setMessage(ChatColor.translateAlternateColorCodes('&', e.getMessage()));
     }
 
-    @SuppressWarnings("deprecation")
     @EventHandler
-    public void onSneak(PlayerToggleSneakEvent e) {
-        if (e.getPlayer().getItemInHand().equals(new ItemStack(Material.STICK, 1))) {
-            e.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.DOLPHINS_GRACE, 1000, 5));
-            e.getPlayer().setGameMode(GameMode.CREATIVE);
+    public void setEffect(UpdateEvent e){
+        if (e.getUpdateTime().equals(UpdateTime.MINUTE)){
+            for (Player p : Bukkit.getOnlinePlayers()){
+                p.addPotionEffect(new PotionEffect(PotionEffectType.DOLPHINS_GRACE, 2000, 5));
+                p.addPotionEffect(new PotionEffect(PotionEffectType.CONDUIT_POWER, 2000, 5));
+            }
         }
     }
 }

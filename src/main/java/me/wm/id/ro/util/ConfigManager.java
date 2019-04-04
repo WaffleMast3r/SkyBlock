@@ -41,11 +41,8 @@ public class ConfigManager {
             file.getParentFile().mkdirs();
             if (resource != null) {
                 InputStream r = Main.getInstance().getResource(resource);
-                OutputStream outputStream = null;
-                try {
-                    outputStream = new FileOutputStream(file);
+                try (OutputStream outputStream = new FileOutputStream(file)) {
                     IOUtils.copy(r, outputStream);
-                    outputStream.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
