@@ -1,6 +1,7 @@
 package me.wm.id.ro;
 
 import me.wm.id.ro.Chat.Formatting;
+import me.wm.id.ro.Regions.RegionManager;
 import me.wm.id.ro.util.Language.LanguageManager;
 import me.wm.id.ro.util.Language.LanguageSelectorMenu;
 import me.wm.id.ro.util.Logger;
@@ -62,7 +63,7 @@ public final class Main extends JavaPlugin implements Listener {
     public void onEnable() {
         if (approve) {
             instance = this;
-//            if (!me.wm.id.ro.Main.getInstance().getServer().getPluginManager().isPluginEnabled("MVdWPlaceholderAPI")) {
+//            if (!me.wm.id.ro.Main.getConfig().getServer().getPluginManager().isPluginEnabled("MVdWPlaceholderAPI")) {
 //                Logger.error("Cannot find the plugin $1PlaceholderAPI!");
 //                Logger.error("Disabling the plugin!");
 //                approve = false;
@@ -72,6 +73,7 @@ public final class Main extends JavaPlugin implements Listener {
             LanguageManager.getInstance().loadLanguages();
             Logger.info("$0Plugin enabled!");
             TaskManager.Enable();
+            RegionManager.Enable();
             getServer().getPluginManager().registerEvents(this, this);
 
             loadClasses();
