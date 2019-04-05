@@ -5,13 +5,13 @@ Prefix: "$4[$0%PluginName%$4] $2\xbb"
 
 ColorCharacter: "$"
 PluginColors:
-- '3' #0
-- 'b' #1
-- '9' #2
-- '7' #3
-- '8' #4
-- 'f' #5
-- 'l' #6
-- 'm' #7
-- 'a' #8
-- 'c' #9
+- '3' #0 DARK AQUA
+- 'b' #1 AQUA
+- '9' #2 INDIGO
+- '7' #3 LIGHT GRAY
+- '8' #4 DARK GRAY
+- 'f' #5 WHITE
+- 'l' #6 BOLD
+- 'm' #7 STRIKETHROUGHT
+- 'a' #8 LIME
+- 'c' #9 RED

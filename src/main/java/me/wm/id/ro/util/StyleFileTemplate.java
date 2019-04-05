@@ -124,7 +124,7 @@ public class StyleFileTemplate {
             public CustomItem[] items() {
                 return new CustomItem[] {
                         new CustomItem(null, Material.SMOOTH_STONE, 0, -1, 1, "region", "$1{ID} - {Name}", null, null),
-                        new CustomItem(null, Material.ANVIL, 0, 49, 1, "create", "$1Create region", null, null)
+                        new CustomItem(null, Material.ANVIL, 0, 40, 1, "create", "$1Create region", null, null)
                 };
             }
 

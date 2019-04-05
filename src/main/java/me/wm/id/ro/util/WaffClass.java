@@ -7,13 +7,16 @@ import me.wm.id.ro.util.files.Config;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.Particle;
 import org.bukkit.entity.Player;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
 public class WaffClass {
 
-    public static void sendPlayer(Player p, String server){
+    public static void sendPlayer(Player p, String server) {
         ByteArrayDataOutput out = ByteStreams.newDataOutput();
         out.writeUTF("Connect");
         out.writeUTF(server);
@@ -100,6 +103,20 @@ public class WaffClass {
             String[] str = loc.split(":");
             Location location = new Location(Main.getInstance().getServer().getWorld(str[0]), Double.valueOf(str[1]), Double.valueOf(str[2]), Double.valueOf(str[3]), Float.valueOf(str[4]), Float.valueOf(str[5]));
             return location;
+        }
+    }
+
+    public static class Particles {
+        public static void displayRedstoneParticle(Location loc, int r, int g, int b) {
+
+            try {
+                Constructor<?> dustOptionsConstructor = Particle.REDSTONE.getDataType().getConstructor(org.bukkit.Color.class, float.class);
+                Object dustOptions = dustOptionsConstructor.newInstance(org.bukkit.Color.fromRGB(r, g, b), 5);
+                loc.getWorld().getPlayers().forEach(player -> player.spawnParticle(Particle.REDSTONE, loc.add(0.5, 0, 0.5), 1, 0, 0, 0, 0, dustOptions));
+            } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
+                e.printStackTrace();
+            }
+
         }
     }
 }
