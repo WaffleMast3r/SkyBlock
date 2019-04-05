@@ -1,9 +1,11 @@
 package me.wm.id.ro.Regions;
 
 import javafx.util.Pair;
+import me.wm.id.ro.Regions.listeners.noPvP;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
+import org.bukkit.entity.Player;
 
 import java.util.HashMap;
 import java.util.Objects;
@@ -38,16 +40,20 @@ public class RegionManager {
                                                 RegionData.getConfig().getYml().getInt("regions." + key + ".positions.1.z")
                                         )
                                 ),
-                                Bukkit.getWorld(Objects.requireNonNull(RegionData.getConfig().getYml().getString("regions." + key + ".positions.1.world"))).getBlockAt(
+                                Bukkit.getWorld(Objects.requireNonNull(RegionData.getConfig().getYml().getString("regions." + key + ".positions.2.world"))).getBlockAt(
                                         new Location(
-                                                Bukkit.getWorld(Objects.requireNonNull(RegionData.getConfig().getYml().getString("regions." + key + ".positions.1.world"))),
-                                                RegionData.getConfig().getYml().getInt("regions." + key + ".positions.1.x"),
-                                                RegionData.getConfig().getYml().getInt("regions." + key + ".positions.1.y"),
-                                                RegionData.getConfig().getYml().getInt("regions." + key + ".positions.1.z")
+                                                Bukkit.getWorld(Objects.requireNonNull(RegionData.getConfig().getYml().getString("regions." + key + ".positions.2.world"))),
+                                                RegionData.getConfig().getYml().getInt("regions." + key + ".positions.2.x"),
+                                                RegionData.getConfig().getYml().getInt("regions." + key + ".positions.2.y"),
+                                                RegionData.getConfig().getYml().getInt("regions." + key + ".positions.2.z")
                                         )
                                 )
                         ), RegionData.getConfig().getYml().getString("regions." + id + ".name"), id));
             }
+
+        //activate Listeners
+        new noPvP();
+
     }
 
     public void createRegion(Pair<Block, Block> positions, String name) {
@@ -67,5 +73,12 @@ public class RegionManager {
         RegionData.getConfig().getYml().set("regions." + id + ".positions.2.z", positions.getValue().getZ());
 
         RegionData.getConfig().saveConfig();
+    }
+
+    public Region isPlayerInRegion(Player p) {
+        for (Region r : regions.values()){
+            if (r.isInRegion(p)) return r;
+        }
+        return null;
     }
 }

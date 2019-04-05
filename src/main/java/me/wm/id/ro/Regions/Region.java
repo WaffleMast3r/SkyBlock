@@ -5,6 +5,7 @@ import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Region {
     private Pair<Block, Block> positions;
@@ -23,5 +24,9 @@ public class Region {
     public boolean isInRegion(Player p){
 
         return true;
+    }
+
+    public boolean hasProperty(RegionProperties... props) {
+        return properties.containsAll(Arrays.asList(props));
     }
 }
