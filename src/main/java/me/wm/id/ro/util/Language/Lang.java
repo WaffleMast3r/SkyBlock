@@ -21,8 +21,8 @@ public class Lang {
 
         config.getYml().options().copyDefaults(true);
         config.getYml().addDefault("LanguageDisplayName", displayName);
-        config.getYml().addDefault("Prefix", Config.getInstance().getConfig().getYml().getString("Prefix"));
-        config.getYml().addDefault("LanguageColors", Config.getInstance().getConfig().getYml().getStringList("PluginColors"));
+        config.getYml().addDefault("Prefix", Config.getConfig().getYml().getString("Prefix"));
+        config.getYml().addDefault("LanguageColors", Config.getConfig().getYml().getStringList("PluginColors"));
         config.saveConfig();
     }
 

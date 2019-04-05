@@ -49,7 +49,7 @@ public class LanguageManager {
     }
 
     public void loadLanguages() {
-        File default_lang = new File(Main.getInstance().getDataFolder().getAbsolutePath() + File.separator + "languages", "StyleFile_" + Config.getInstance().getConfig().getYml().getString("defaultLanguage") + ".yml");
+        File default_lang = new File(Main.getInstance().getDataFolder().getAbsolutePath() + File.separator + "languages", "StyleFile_" + Config.getConfig().getYml().getString("defaultLanguage") + ".yml");
         if (!default_lang.exists()) {
             default_lang.getParentFile().mkdirs();
             try {
@@ -149,7 +149,7 @@ public class LanguageManager {
         }
 
         if (lang == null || !existsLanguage(lang)) {
-            lang = Config.getInstance().getConfig().getYml().getString("defaultLanguage");
+            lang = Config.getConfig().getYml().getString("defaultLanguage");
             db.execute("INSERT INTO `language` (`uuid`, `ip`, `language`) VALUES('" + p.getUniqueId().toString() + "', '" + ip + "', '" + lang + "')");
         }
 

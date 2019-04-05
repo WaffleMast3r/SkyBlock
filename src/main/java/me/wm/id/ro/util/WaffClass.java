@@ -65,9 +65,9 @@ public class WaffClass {
         private String spl;
 
         private Color() {
-            spl = Config.getInstance().getConfig().getYml().getString("ColorCharacter");
+            spl = Config.getConfig().getYml().getString("ColorCharacter");
             colors = new ArrayList<>();
-            colors.addAll(Config.getInstance().getConfig().getYml().getStringList("PluginColors"));
+            colors.addAll(Config.getConfig().getYml().getStringList("PluginColors"));
         }
 
         public static Color getInstance() {

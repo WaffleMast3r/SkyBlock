@@ -11,25 +11,25 @@ public class Logger {
     public static void info(String message) {
         Main.getInstance().getServer().getConsoleSender().sendMessage(
                 WaffClass.Color.getInstance().translateColor(
-                        Config.getInstance().getConfig().getYml().getString("Prefix").replace("%PluginName%", Main.getInstance().getDescription().getName()) + " $0"+ message)
+                        Config.getConfig().getYml().getString("Prefix").replace("%PluginName%", Main.getInstance().getDescription().getName()) + " $0"+ message)
         );
     }
 
     public static void debug(String message) {
         if (debugger)
-            Main.getInstance().getServer().getConsoleSender().sendMessage(WaffClass.Color.getInstance().translateColor(Config.getInstance().getConfig().getYml().getString("Prefix").replace("%PluginName%", Main.getInstance().getDescription().getName()) + " $0"+ message));
+            Main.getInstance().getServer().getConsoleSender().sendMessage(WaffClass.Color.getInstance().translateColor(Config.getConfig().getYml().getString("Prefix").replace("%PluginName%", Main.getInstance().getDescription().getName()) + " $0"+ message));
     }
 
     public static void error(String message) {
         Main.getInstance().getServer().getConsoleSender().sendMessage(
                 WaffClass.Color.getInstance().translateColor(
-                        Config.getInstance().getConfig().getYml().getString("Prefix")
+                        Config.getConfig().getYml().getString("Prefix")
                                 .replace("%PluginName%", Main.getInstance().getDescription().getName()) + " @err"+ message)
         );
     }
 
     public static void broadcast(String message) {
-        Bukkit.broadcastMessage(WaffClass.Color.getInstance().translateColor(Config.getInstance().getConfig().getYml().getString("Prefix").replace("%PluginName%", Main.getInstance().getDescription().getName()) + " $0"+ message));
+        Bukkit.broadcastMessage(WaffClass.Color.getInstance().translateColor(Config.getConfig().getYml().getString("Prefix").replace("%PluginName%", Main.getInstance().getDescription().getName()) + " $0"+ message));
     }
 
     public static void infoRaw(String toString) {

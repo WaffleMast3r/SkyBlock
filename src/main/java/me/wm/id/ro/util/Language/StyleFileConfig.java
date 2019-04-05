@@ -44,7 +44,7 @@ public class StyleFileConfig {
         guiCache = new HashMap<>();
         messageCache = new HashMap<>();
         scoreboardCache = new HashMap<>();
-        spl = Config.getInstance().getConfig().getYml().getString("ColorCharacter");
+        spl = Config.getConfig().getYml().getString("ColorCharacter");
         colors = new ArrayList<>();
         colors.addAll(cfg.getYml().getStringList("LanguageColors"));
     }
@@ -263,7 +263,7 @@ public class StyleFileConfig {
 
     public ComponentBuilder getPrefix() {
 
-        String c = Config.getInstance().getConfig().getYml().getString("ColorCharacter");
+        String c = Config.getConfig().getYml().getString("ColorCharacter");
 
         ComponentBuilder cb = new ComponentBuilder(translateColor(cfg.getYml().getString("Prefix").replaceAll("%PluginName%", Main.getInstance().getDescription().getName())));
         cb.event(new HoverEvent(HoverEvent.Action.SHOW_TEXT, TextComponent.fromLegacyText(
