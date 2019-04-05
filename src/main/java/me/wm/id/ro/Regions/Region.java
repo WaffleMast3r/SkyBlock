@@ -40,4 +40,12 @@ public class Region {
     public boolean hasProperty(RegionProperties... props) {
         return properties.containsAll(Arrays.asList(props));
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getId() {
+        return id;
+    }
 }

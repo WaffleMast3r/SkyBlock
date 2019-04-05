@@ -114,6 +114,7 @@ public final class Main extends JavaPlugin implements Listener {
             for (Player p : Bukkit.getOnlinePlayers()){
                 p.addPotionEffect(new PotionEffect(PotionEffectType.DOLPHINS_GRACE, 2000, 5));
                 p.addPotionEffect(new PotionEffect(PotionEffectType.CONDUIT_POWER, 2000, 5));
+                p.setGlowing(false);
             }
         }
     }

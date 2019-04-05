@@ -81,4 +81,8 @@ public class RegionManager {
         }
         return null;
     }
+
+    public HashMap<Integer, Region> getRegions() {
+        return regions;
+    }
 }
