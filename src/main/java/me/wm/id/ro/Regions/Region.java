@@ -22,8 +22,19 @@ public class Region {
     }
 
     public boolean isInRegion(Player p){
+        final int px = (int) p.getLocation().getX();
+        final int py = (int) p.getLocation().getY();
+        final int pz = (int) p.getLocation().getZ();
 
-        return true;
+        final int b1x = Math.min(positions.getKey().getX(), positions.getValue().getX());
+        final int b1y = Math.min(positions.getKey().getY(), positions.getValue().getY());
+        final int b1z = Math.min(positions.getKey().getZ(), positions.getValue().getZ());
+
+        final int b2x = Math.max(positions.getKey().getX(), positions.getValue().getX());
+        final int b2y = Math.max(positions.getKey().getY(), positions.getValue().getY());
+        final int b2z = Math.max(positions.getKey().getZ(), positions.getValue().getZ());
+
+        return ((px >= b1x && px <= b2x) && (py >= b1y && py <= b2y) && (pz >= b1z && pz <= b2z));
     }
 
     public boolean hasProperty(RegionProperties... props) {
