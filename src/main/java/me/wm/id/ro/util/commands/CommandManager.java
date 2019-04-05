@@ -1,5 +1,6 @@
 package me.wm.id.ro.util.commands;
 
+import me.wm.id.ro.Commands.Region;
 import me.wm.id.ro.Commands.gmc;
 import me.wm.id.ro.Main;
 import org.bukkit.event.Listener;
@@ -21,6 +22,7 @@ public class CommandManager implements Listener {
     public void loadCommands(){
         new helpCommand();
         new gmc();
+        new Region();
     }
 
     public static CommandManager getInstance() {

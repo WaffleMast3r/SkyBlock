@@ -9,36 +9,45 @@ import java.util.HashMap;
 import java.util.Objects;
 
 public class RegionManager {
+    public static RegionManager instance = new RegionManager();
     private static HashMap<Integer, Region> regions;
+
+    private RegionManager() {
+
+    }
+
+    public static RegionManager getInstance() {
+        return instance;
+    }
 
     public static void Enable() {
         RegionData.getConfig().load();
         regions = new HashMap<>();
         // load from config
+        if (RegionData.getConfig().getYml().get("regions") != null)
+            for (String key : RegionData.getConfig().getYml().getConfigurationSection("regions").getKeys(false)) {
+                final int id = Integer.parseInt(key);
 
-        for(String key: RegionData.getConfig().getYml().getConfigurationSection("regions").getKeys(false)) {
-            final int id = Integer.parseInt(key);
-
-            regions.put(id,
-                    new Region(new Pair<>(
-                            Bukkit.getWorld(Objects.requireNonNull(RegionData.getConfig().getYml().getString("regions." + key + ".positions.1.world"))).getBlockAt(
-                                    new Location(
-                                        Bukkit.getWorld(Objects.requireNonNull(RegionData.getConfig().getYml().getString("regions." + key + ".positions.1.world"))),
-                                        RegionData.getConfig().getYml().getInt("regions." + key + ".positions.1.x"),
-                                        RegionData.getConfig().getYml().getInt("regions." + key + ".positions.1.y"),
-                                        RegionData.getConfig().getYml().getInt("regions." + key + ".positions.1.z")
-                                    )
-                            ),
-                            Bukkit.getWorld(Objects.requireNonNull(RegionData.getConfig().getYml().getString("regions." + key + ".positions.1.world"))).getBlockAt(
-                                    new Location(
-                                            Bukkit.getWorld(Objects.requireNonNull(RegionData.getConfig().getYml().getString("regions." + key + ".positions.1.world"))),
-                                            RegionData.getConfig().getYml().getInt("regions." + key + ".positions.1.x"),
-                                            RegionData.getConfig().getYml().getInt("regions." + key + ".positions.1.y"),
-                                            RegionData.getConfig().getYml().getInt("regions." + key + ".positions.1.z")
-                                    )
-                            )
-                    ), RegionData.getConfig().getYml().getString("regions." + id + ".name"), id));
-        }
+                regions.put(id,
+                        new Region(new Pair<>(
+                                Bukkit.getWorld(Objects.requireNonNull(RegionData.getConfig().getYml().getString("regions." + key + ".positions.1.world"))).getBlockAt(
+                                        new Location(
+                                                Bukkit.getWorld(Objects.requireNonNull(RegionData.getConfig().getYml().getString("regions." + key + ".positions.1.world"))),
+                                                RegionData.getConfig().getYml().getInt("regions." + key + ".positions.1.x"),
+                                                RegionData.getConfig().getYml().getInt("regions." + key + ".positions.1.y"),
+                                                RegionData.getConfig().getYml().getInt("regions." + key + ".positions.1.z")
+                                        )
+                                ),
+                                Bukkit.getWorld(Objects.requireNonNull(RegionData.getConfig().getYml().getString("regions." + key + ".positions.1.world"))).getBlockAt(
+                                        new Location(
+                                                Bukkit.getWorld(Objects.requireNonNull(RegionData.getConfig().getYml().getString("regions." + key + ".positions.1.world"))),
+                                                RegionData.getConfig().getYml().getInt("regions." + key + ".positions.1.x"),
+                                                RegionData.getConfig().getYml().getInt("regions." + key + ".positions.1.y"),
+                                                RegionData.getConfig().getYml().getInt("regions." + key + ".positions.1.z")
+                                        )
+                                )
+                        ), RegionData.getConfig().getYml().getString("regions." + id + ".name"), id));
+            }
     }
 
     public void createRegion(Pair<Block, Block> positions, String name) {
