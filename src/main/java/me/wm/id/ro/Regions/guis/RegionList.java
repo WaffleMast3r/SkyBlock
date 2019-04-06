@@ -50,8 +50,8 @@ public class RegionList extends EasyBrowserGUI<Region> {
         return new Button(getItem("region").setPlaceholders(ph), new Action() {
             @Override
             public void run(Player paramPlayer, ActionType paramActionType) {
-                paramOBJ.visualize();
                 closeInventory();
+                paramOBJ.visualize();
             }
         });
     }
@@ -61,6 +61,7 @@ public class RegionList extends EasyBrowserGUI<Region> {
         putButton(getItem("create"), new Action() {
             @Override
             public void run(Player paramPlayer, ActionType paramActionType) {
+                closeInventory();
                 new ChatDialog(p, "Type the name of the region!", new ChatDialog.Action() {
                     @Override
                     public void run(String s) {
@@ -68,7 +69,6 @@ public class RegionList extends EasyBrowserGUI<Region> {
                             @Override
                             public void run(Block pos1, Block pos2) {
                                 RegionManager.getInstance().createRegion(new Pair<>(pos1, pos2), s);
-                                closeInventory();
                             }
                         });
                     }

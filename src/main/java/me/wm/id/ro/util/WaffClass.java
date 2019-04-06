@@ -2,12 +2,11 @@ package me.wm.id.ro.util;
 
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
+import javafx.util.Pair;
 import me.wm.id.ro.Main;
 import me.wm.id.ro.util.files.Config;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.Location;
-import org.bukkit.Particle;
+import org.bukkit.*;
 import org.bukkit.entity.Player;
 
 import java.lang.reflect.Constructor;
@@ -103,6 +102,25 @@ public class WaffClass {
             String[] str = loc.split(":");
             Location location = new Location(Main.getInstance().getServer().getWorld(str[0]), Double.valueOf(str[1]), Double.valueOf(str[2]), Double.valueOf(str[3]), Float.valueOf(str[4]), Float.valueOf(str[5]));
             return location;
+        }
+
+        public Pair<me.wm.id.ro.util.Location, me.wm.id.ro.util.Location> getMinAndMaxLocations(Location loc1, Location loc2) {
+
+            World world1 = loc1.getWorld();
+            double x1 = Math.min(loc1.getX(), loc2.getX());
+            double y1 = Math.min(loc1.getY(), loc2.getY());
+            double z1 = Math.min(loc1.getZ(), loc2.getZ());
+            double yaw1 = Math.min(loc1.getYaw(), loc2.getYaw());
+            double pitch1 = Math.min(loc1.getPitch(), loc2.getPitch());
+
+            World world2 = loc2.getWorld();
+            double x2 = Math.max(loc1.getX(), loc2.getX());
+            double y2 = Math.max(loc1.getY(), loc2.getY());
+            double z2 = Math.max(loc1.getZ(), loc2.getZ());
+            double yaw2 = Math.max(loc1.getYaw(), loc2.getYaw());
+            double pitch2 = Math.max(loc1.getPitch(), loc2.getPitch());
+
+            return world1 == world2 ? new Pair<>(new me.wm.id.ro.util.Location(world1, x1, y1, z1, Float.parseFloat(yaw1 + ""), Float.parseFloat(pitch1 + "")), new me.wm.id.ro.util.Location(world2, x2, y2, z2, Float.parseFloat(yaw2 + ""), Float.parseFloat(pitch2 + ""))) : null;
         }
     }
 
