@@ -123,6 +123,7 @@ public class StyleFileTemplate {
             @Override
             public CustomItem[] items() {
                 return new CustomItem[] {
+                        new CustomItem(null, Material.SMOOTH_STONE, 0, -1, 1, "region", "$1{ID} - {Name}", null, null),
                         new CustomItem(null, Material.ANVIL, 0, 40, 1, "create", "$1Create region", null, null)
                 };
             }
@@ -133,62 +134,62 @@ public class StyleFileTemplate {
             }
         });
 
-//        guis.put("RegionOptions", new GUIContents() {
-//            @Override
-//            public String title() {
-//                return "Managing region";
-//            }
-//
-//            @Override
-//            public int size() {
-//                return 9;
-//            }
-//
-//            @Override
-//            public CustomItem[] items() {
-//                ArrayList<String> infoLore = new ArrayList<>();
-//                infoLore.add("$3ID: $4{ID}");
-//                infoLore.add("$3Name: $4{RegionName}");
-//                infoLore.add("$3Positions: $4{Pos1} $3/ $4{Pos2}");
-//
-//                return new CustomItem[] {
-//                        new CustomItem(null, Material.SMOOTH_STONE, 0, 0, 1, "change_icon", "$1Change region icon", null, null),
-//                        new CustomItem(null, Material.PAPER, 0, 2, 1, "properties", "$1Region properties", null, null),
-//                        new CustomItem(null, Material.BOOK, 0, 4, 1, "info", "$1Region information", null, null),
-//                        new CustomItem(null, Material.BARRIER, 0, 6, 1, "delete", "$9Delete this region", null, null),
-//                        new CustomItem(null, Material.GLASS, 0, 8, 1, "visualize", "$1Visualize region", null, null)
-//                };
-//            }
-//
-//            @Override
-//            public CustomFillItem[] fillItems() {
-//                return new CustomFillItem[0];
-//            }
-//        });
+        guis.put("RegionOptions", new GUIContents() {
+            @Override
+            public String title() {
+                return "Managing region";
+            }
 
-//        guis.put("RegionPropertiesMenu", new GUIContents() {
-//            @Override
-//            public String title() {
-//                return "Select what properties";
-//            }
-//
-//            @Override
-//            public int size() {
-//                return 9 * 5;
-//            }
-//
-//            @Override
-//            public CustomItem[] items() {
-//                return new CustomItem[]{
-//                        new CustomItem(null, Material.PAPER, 0, -1, 1, "Property", "{Name} - {Status}", null, null)
-//                };
-//            }
-//
-//            @Override
-//            public CustomFillItem[] fillItems() {
-//                return new CustomFillItem[0];
-//            }
-//        });
+            @Override
+            public int size() {
+                return 9;
+            }
+
+            @Override
+            public CustomItem[] items() {
+                ArrayList<String> infoLore = new ArrayList<>();
+                infoLore.add("$3ID: $4{ID}");
+                infoLore.add("$3Name: $4{RegionName}");
+                infoLore.add("$3Positions: $4{Pos1} $3/ $4{Pos2}");
+
+                return new CustomItem[] {
+                        new CustomItem(null, Material.SMOOTH_STONE, 0, 0, 1, "change_icon", "$1Change region icon", null, null),
+                        new CustomItem(null, Material.PAPER, 0, 2, 1, "properties", "$1Region properties", null, null),
+                        new CustomItem(null, Material.BOOK, 0, 4, 1, "info", "$1Region information", infoLore, null),
+                        new CustomItem(null, Material.BARRIER, 0, 6, 1, "delete", "$9Delete this region", null, null),
+                        new CustomItem(null, Material.GLASS, 0, 8, 1, "visualize", "$1Visualize region", null, null)
+                };
+            }
+
+            @Override
+            public CustomFillItem[] fillItems() {
+                return new CustomFillItem[0];
+            }
+        });
+
+        guis.put("RegionPropertiesMenu", new GUIContents() {
+            @Override
+            public String title() {
+                return "Select what properties";
+            }
+
+            @Override
+            public int size() {
+                return 9 * 5;
+            }
+
+            @Override
+            public CustomItem[] items() {
+                return new CustomItem[]{
+                        new CustomItem(null, Material.PAPER, 0, -1, 1, "Property", "{Name} - {Status}", null, null)
+                };
+            }
+
+            @Override
+            public CustomFillItem[] fillItems() {
+                return new CustomFillItem[0];
+            }
+        });
 
         return guis;
     }

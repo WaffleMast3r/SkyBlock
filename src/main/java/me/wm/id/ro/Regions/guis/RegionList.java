@@ -47,7 +47,7 @@ public class RegionList extends EasyBrowserGUI<Region> {
             }
         });
 
-        return new Button(paramOBJ.getIcon().setPlaceholders(ph), new Action() {
+        return new Button(getItem("region").setPlaceholders(ph), new Action() {
             @Override
             public void run(Player paramPlayer, ActionType paramActionType) {
                 closeInventory();
