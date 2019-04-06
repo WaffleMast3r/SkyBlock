@@ -39,7 +39,7 @@ public class LanguageManager {
         return instance;
     }
 
-    public void reloadLanguages(){
+    public void reloadLanguages() {
 
         langCache = new HashMap<>();
         languages = new HashMap<>();
@@ -130,7 +130,10 @@ public class LanguageManager {
     private String getLang(Player p) {
 
         String lang;
-        String ip = p.getAddress().toString().split("/")[1].split(":")[0];
+        Logger.error(Objects.requireNonNull(p.getAddress()).getHostName());
+        String ip = Objects.requireNonNull(p.getAddress().getHostName());
+        Logger.error(ip);
+//        String ip = p.getAddress().toString().split("/")[1].split(":")[0];
 
         if (langCache.containsKey(ip)) {
             if (existsLanguage(langCache.get(ip)))

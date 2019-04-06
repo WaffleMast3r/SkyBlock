@@ -34,7 +34,7 @@ public class RegionOptions extends EasyGUI {
         putButton(getItem("properties"), new Action() {
             @Override
             public void run(Player paramPlayer, ActionType paramActionType) {
-
+//                new RegionPropertiesMenu(paramPlayer, region);
             }
         });
 
