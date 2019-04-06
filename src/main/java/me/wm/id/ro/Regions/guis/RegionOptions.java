@@ -24,6 +24,13 @@ public class RegionOptions extends EasyGUI {
     }
 
     private void refresh() {
+        putButton(getItem("change_icon"), new Action() {
+            @Override
+            public void run(Player paramPlayer, ActionType paramActionType) {
+
+            }
+        });
+
         putButton(getItem("properties"), new Action() {
             @Override
             public void run(Player paramPlayer, ActionType paramActionType) {

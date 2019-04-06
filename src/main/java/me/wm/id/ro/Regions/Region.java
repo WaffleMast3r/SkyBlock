@@ -6,6 +6,8 @@ import me.wm.id.ro.util.Location;
 import me.wm.id.ro.util.Updater.UpdateEvent;
 import me.wm.id.ro.util.Updater.UpdateTime;
 import me.wm.id.ro.util.WaffClass;
+import me.wm.id.ro.util.gui.CustomItem;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -20,6 +22,7 @@ public class Region implements Listener {
     private String name;
     private int id;
     private boolean visualize = false;
+    private CustomItem icon = new CustomItem(null, Material.SMOOTH_STONE, 0, -1, 1,"region", "$1" + id + " - " + name, null, null);
 
     public Region(Pair<Block, Block> positions, String name, int id) {
         this.positions = positions;
@@ -65,6 +68,10 @@ public class Region implements Listener {
 
     public Block getSecondPosition() {
         return positions.getValue();
+    }
+
+    public CustomItem getIcon() {
+        return icon;
     }
 
     public void visualize() {
