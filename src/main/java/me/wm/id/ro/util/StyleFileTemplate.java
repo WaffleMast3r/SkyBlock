@@ -134,6 +134,38 @@ public class StyleFileTemplate {
             }
         });
 
+        guis.put("RegionOptions", new GUIContents() {
+            @Override
+            public String title() {
+                return "Managing region";
+            }
+
+            @Override
+            public int size() {
+                return 9;
+            }
+
+            @Override
+            public CustomItem[] items() {
+                ArrayList<String> infoLore = new ArrayList<>();
+                infoLore.add("$3ID: $4{ID}");
+                infoLore.add("$3Name: $4{RegionName}");
+                infoLore.add("$3Positions: $4{Pos1} $3/ $4{Pos2}");
+
+                return new CustomItem[] {
+                        new CustomItem(null, Material.PAPER, 0, 1, 1, "properties", "$1Region properties", null, null),
+                        new CustomItem(null, Material.BOOK, 0, 3, 1, "info", "$1Region information", infoLore, null),
+                        new CustomItem(null, Material.BARRIER, 0, 5, 1, "delete", "$9Delete this region", null, null),
+                        new CustomItem(null, Material.GLASS, 0, 7, 1, "visualize", "$1Visualize region", null, null)
+                };
+            }
+
+            @Override
+            public CustomFillItem[] fillItems() {
+                return new CustomFillItem[0];
+            }
+        });
+
         return guis;
     }
 

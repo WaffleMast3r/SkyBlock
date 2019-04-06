@@ -59,9 +59,16 @@ public class Region implements Listener {
         return id;
     }
 
+    public Block getFirstPosition() {
+        return positions.getKey();
+    }
+
+    public Block getSecondPosition() {
+        return positions.getValue();
+    }
+
     public void visualize() {
         visualize = !visualize;
-
     }
 
     @EventHandler
@@ -141,5 +148,7 @@ public class Region implements Listener {
             }
         }
     }
+
+
 
 }
