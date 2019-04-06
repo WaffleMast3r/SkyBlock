@@ -1,7 +1,6 @@
 package me.wm.id.ro.util.gui;
 
 import me.wm.id.ro.util.Language.LanguageManager;
-import me.wm.id.ro.util.Logger;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
@@ -97,12 +96,27 @@ public class CustomItem {
         return material;
     }
 
+    public CustomItem setMaterial(Material material) {
+        this.material = material;
+        return this;
+    }
+
     public int getID() {
         return ID;
     }
 
+    public CustomItem setID(int ID) {
+        this.ID = ID;
+        return this;
+    }
+
     public int getAmount() {
         return amount;
+    }
+
+    public CustomItem setAmount(int amount) {
+        this.amount = amount;
+        return this;
     }
 
     public String getTitle() {
