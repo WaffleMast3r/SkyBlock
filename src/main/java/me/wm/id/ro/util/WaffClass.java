@@ -129,7 +129,7 @@ public class WaffClass {
 
             try {
                 Constructor<?> dustOptionsConstructor = Particle.REDSTONE.getDataType().getConstructor(org.bukkit.Color.class, float.class);
-                Object dustOptions = dustOptionsConstructor.newInstance(org.bukkit.Color.fromRGB(r, g, b), 5);
+                Object dustOptions = dustOptionsConstructor.newInstance(org.bukkit.Color.fromRGB(r, g, b), 2);
                 loc.getWorld().getPlayers().forEach(player -> player.spawnParticle(Particle.REDSTONE, loc.add(0.5, 0, 0.5), 1, 0, 0, 0, 0, dustOptions));
             } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
                 e.printStackTrace();

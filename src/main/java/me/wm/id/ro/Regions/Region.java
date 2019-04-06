@@ -1,24 +1,32 @@
 package me.wm.id.ro.Regions;
 
 import javafx.util.Pair;
+import me.wm.id.ro.Main;
 import me.wm.id.ro.util.Location;
+import me.wm.id.ro.util.Updater.UpdateEvent;
+import me.wm.id.ro.util.Updater.UpdateTime;
 import me.wm.id.ro.util.WaffClass;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Region {
+public class Region implements Listener {
     private Pair<Block, Block> positions;
     private ArrayList<RegionProperties> properties;
     private String name;
     private int id;
+    private boolean visualize = false;
 
     public Region(Pair<Block, Block> positions, String name, int id) {
         this.positions = positions;
         this.name = name;
         this.id = id;
+
+        Main.getInstance().getServer().getPluginManager().registerEvents(this, Main.getInstance());
 
         properties = new ArrayList<>();
     }
@@ -52,19 +60,85 @@ public class Region {
     }
 
     public void visualize() {
-        Pair<Location, Location> locs = WaffClass.Loc.getInstance().getMinAndMaxLocations(positions.getKey().getLocation(), positions.getValue().getLocation());
-        Location loc1 = locs.getKey();
-        Location loc2 = locs.getValue();
+        visualize = !visualize;
 
-        Location loc;
-        for (double x = loc1.getX(); x <= loc2.getX(); x++) {
-            loc.add(Math.abs(loc2.getX() - x), 0, 0);
-            WaffClass.Particles.displayRedstoneParticle(loc, 100, 20, 100);
-            loc.subtract(Math.abs(loc2.getX() - x), 0, 0);
+    }
 
-            loc.add(Math.abs(loc2.getX() -x), Math.abs(loc2.getY() - loc1.getY()),0);
-            WaffClass.Particles.displayRedstoneParticle(loc, 100,20,100);
-            loc.subtract(Math.abs(loc2.getX() -x), Math.abs(loc2.getY() - loc1.getY()),0);
+    @EventHandler
+    public void onUpdate(UpdateEvent event) {
+        if (event.getUpdateTime().equals(UpdateTime.SECOND)) {
+            if (visualize) {
+                Pair<Location, Location> locs = WaffClass.Loc.getInstance().getMinAndMaxLocations(positions.getKey().getLocation(), positions.getValue().getLocation());
+                Location loc1 = locs.getKey();
+                Location loc2 = locs.getValue();
+
+                Location loc;
+                for (double x = loc1.getX(); x <= loc2.getX(); x++) {
+                    loc = new Location(loc1.clone());
+                    loc.setX(x);
+                    WaffClass.Particles.displayRedstoneParticle(loc, 100, 20, 100);
+
+                    loc = new Location(loc1.clone());
+                    loc.setX(x);
+                    loc.setY(loc2.getY());
+                    WaffClass.Particles.displayRedstoneParticle(loc, 100, 20, 100);
+
+                    loc = new Location(loc1.clone());
+                    loc.setX(x);
+                    loc.setZ(loc2.getZ());
+                    WaffClass.Particles.displayRedstoneParticle(loc, 100, 20, 100);
+
+                    loc = new Location(loc1.clone());
+                    loc.setX(x);
+                    loc.setY(loc2.getY());
+                    loc.setZ(loc2.getZ());
+                    WaffClass.Particles.displayRedstoneParticle(loc, 100, 20, 100);
+                }
+
+                for (double y = loc1.getY(); y <= loc2.getY(); y++) {
+                    loc = new Location(loc1.clone());
+                    loc.setY(y);
+                    WaffClass.Particles.displayRedstoneParticle(loc, 100, 20, 100);
+
+                    loc = new Location(loc1.clone());
+                    loc.setY(y);
+                    loc.setX(loc2.getX());
+                    WaffClass.Particles.displayRedstoneParticle(loc, 100, 20, 100);
+
+                    loc = new Location(loc1.clone());
+                    loc.setY(y);
+                    loc.setZ(loc2.getZ());
+                    WaffClass.Particles.displayRedstoneParticle(loc, 100, 20, 100);
+
+                    loc = new Location(loc1.clone());
+                    loc.setX(loc2.getX());
+                    loc.setY(y);
+                    loc.setZ(loc2.getZ());
+                    WaffClass.Particles.displayRedstoneParticle(loc, 100, 20, 100);
+                }
+
+                for (double z = loc1.getZ(); z <= loc2.getZ(); z++) {
+                    loc = new Location(loc1.clone());
+                    loc.setZ(z);
+                    WaffClass.Particles.displayRedstoneParticle(loc, 100, 20, 100);
+
+                    loc = new Location(loc1.clone());
+                    loc.setZ(z);
+                    loc.setX(loc2.getX());
+                    WaffClass.Particles.displayRedstoneParticle(loc, 100, 20, 100);
+
+                    loc = new Location(loc1.clone());
+                    loc.setZ(z);
+                    loc.setY(loc2.getY());
+                    WaffClass.Particles.displayRedstoneParticle(loc, 100, 20, 100);
+
+                    loc = new Location(loc1.clone());
+                    loc.setX(loc2.getX());
+                    loc.setY(loc2.getY());
+                    loc.setZ(z);
+                    WaffClass.Particles.displayRedstoneParticle(loc, 100, 20, 100);
+                }
+            }
         }
     }
 

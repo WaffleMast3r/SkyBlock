@@ -9,8 +9,6 @@
     <list default="true" id="fdd09c32-d2bd-4482-bf95-620be94fc199" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/OceanBlock.jar" beforeDir="false" afterPath="$PROJECT_DIR$/OceanBlock.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/Region.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/Region.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/guis/RegionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/guis/RegionList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/wm/id/ro/util/gui/EasyGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/wm/id/ro/util/gui/EasyGUI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/Region.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+            <state relative-caret-position="136">
+              <caret line="28" column="97" selection-start-line="28" selection-start-column="97" selection-end-line="28" selection-end-column="97" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1510#1511#0" expanded="true" />
@@ -287,7 +285,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ToolWindowAnt Build.ShowToolbar" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554550522321" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554551833271" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/transfer.bat" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
@@ -335,9 +333,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14925373" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14925373" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -348,7 +345,7 @@
       <window_info anchor="bottom" id="Messages" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.32839838" />
-      <window_info anchor="bottom" id="Run" order="4" visible="true" weight="0.2156013" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.2156013" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -784,8 +781,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/Region.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+        <state relative-caret-position="136">
+          <caret line="28" column="97" selection-start-line="28" selection-start-column="97" selection-end-line="28" selection-end-column="97" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1510#1511#0" expanded="true" />
