@@ -23,6 +23,8 @@ public class RegionList extends EasyBrowserGUI<Region> {
         this.p = p;
         setObjectsPerPage(27);
 
+        setTitle(getTitle().replace("{Placeholder}", "Thing"));
+
         super.refresh();
     }
 

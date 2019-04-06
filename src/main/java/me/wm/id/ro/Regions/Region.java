@@ -3,7 +3,6 @@ package me.wm.id.ro.Regions;
 import javafx.util.Pair;
 import me.wm.id.ro.util.Location;
 import me.wm.id.ro.util.WaffClass;
-import org.bukkit.Bukkit;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 
@@ -57,8 +56,16 @@ public class Region {
         Location loc1 = locs.getKey();
         Location loc2 = locs.getValue();
 
-        Bukkit.broadcastMessage(loc1.toString());
-        Bukkit.broadcastMessage(loc2.toString());
+        Location loc;
+        for (double x = loc1.getX(); x <= loc2.getX(); x++) {
+            loc.add(Math.abs(loc2.getX() - x), 0, 0);
+            WaffClass.Particles.displayRedstoneParticle(loc, 100, 20, 100);
+            loc.subtract(Math.abs(loc2.getX() - x), 0, 0);
+
+            loc.add(Math.abs(loc2.getX() -x), Math.abs(loc2.getY() - loc1.getY()),0);
+            WaffClass.Particles.displayRedstoneParticle(loc, 100,20,100);
+            loc.subtract(Math.abs(loc2.getX() -x), Math.abs(loc2.getY() - loc1.getY()),0);
+        }
     }
 
 }

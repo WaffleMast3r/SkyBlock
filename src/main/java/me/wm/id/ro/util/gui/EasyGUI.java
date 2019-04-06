@@ -28,6 +28,7 @@ public abstract class EasyGUI implements Listener {
     private UpdateTime refresh;
     private boolean autoRefresh;
     private Button callBackButton;
+    private String title;
 
     public EasyGUI(Player p, GUIContents contents) {
         this.p = p;
@@ -35,14 +36,15 @@ public abstract class EasyGUI implements Listener {
         this.buttons = new ConcurrentHashMap<>();
         this.refresh = UpdateTime.SECOND;
         this.callBackButton = null;
+        this.title = contents.title();
     }
 
     public void openGUI() {
         if (localInv == null) {
             Main.getInstance().getServer().getPluginManager().registerEvents(this, Main.getInstance());
         }
-        String title = LanguageManager.getInstance().getStyleFile(p).translateColor(contents.title());
-        localInv = Bukkit.createInventory(p, contents.size(), title);
+        String title2 = LanguageManager.getInstance().getStyleFile(p).translateColor(this.title);
+        localInv = Bukkit.createInventory(p, contents.size(), title2);
 
         for (Button b : buttons.keySet()) {
             this.localInv.setItem(buttons.get(b), b.getItem().build());
@@ -229,4 +231,11 @@ public abstract class EasyGUI implements Listener {
         this.autoRefresh = true;
     }
 
+    public void setTitle(String title){
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
 }
