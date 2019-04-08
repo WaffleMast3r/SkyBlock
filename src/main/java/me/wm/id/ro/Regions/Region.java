@@ -23,6 +23,8 @@ public class Region implements Listener {
     private int id;
     private boolean visualize = false;
 
+    private String enterMessage = "&bTest message";
+
     public Region(Pair<Block, Block> positions, String name, int id) {
         this.positions = positions;
         this.name = name;
@@ -151,6 +153,31 @@ public class Region implements Listener {
         }
     }
 
+    public String getPropertyMessageFor(RegionProperties prop) {
+        final String name = prop.getPropName();
 
+        // TODO Add more prop name checks here if property has a message attribute
+        if(!name.equals("Enter Message")) return null;
+
+        if(enterMessage != null) {
+            return enterMessage;
+        }
+
+        return null;
+    }
+
+    public void appendProperty(RegionProperties property) {
+        appendProperty(property, null);
+    }
+
+    public void appendProperty(RegionProperties property, Object additionalData) {
+        if(!properties.contains(property)) properties.add(property);
+
+        if(additionalData instanceof String) {
+            if(property.getPropName().equals("Enter Message")) {
+                enterMessage = (String) additionalData;
+            }
+        }
+    }
 
 }

@@ -7,7 +7,8 @@ import org.bukkit.entity.Player;
 public enum RegionProperties {
 
     NO_PVP("No Pvp", Material.DIAMOND_SWORD, 1, 0),
-    NO_BUILD("No Build", Material.STONE, 1, 0);
+    NO_BUILD("No Build", Material.STONE, 1, 0),
+    ENTER_MESSAGE("Enter Message", Material.PAPER, 1, 0);
 
     private String propName;
     private Material material;
