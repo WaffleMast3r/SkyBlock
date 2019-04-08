@@ -30,15 +30,14 @@ public class RegionChatConfirm implements Listener {
 
         if (e.getMessage().equalsIgnoreCase("confirm")) {
             action.confirm();
-            Bukkit.broadcastMessage("Confirmed!");
-            HandlerList.unregisterAll(this);// TODO: 4/5/2019 fix
+            HandlerList.unregisterAll(this);
         } else if (e.getMessage().equalsIgnoreCase("reset")) {
             action.reset();
-            Bukkit.broadcastMessage("Reset!");// TODO: 4/5/2019 fix
+            LanguageManager.getInstance().sendMessage(p, "RegionChatConfirmMessage");
             HandlerList.unregisterAll(this);
         } else if (e.getMessage().equalsIgnoreCase("cancel")) {
             action.deny();
-            Bukkit.broadcastMessage("Canceled!");// TODO: 4/5/2019 fix
+            LanguageManager.getInstance().sendMessage(p, "RegionChatCancelMessage");
             HandlerList.unregisterAll(this);
         } else {
             LanguageManager.getInstance().sendMessage(p, "RegionChatConfirmMessage");

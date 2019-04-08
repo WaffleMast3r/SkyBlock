@@ -22,7 +22,6 @@ public class Region implements Listener {
     private String name;
     private int id;
     private boolean visualize = false;
-    private CustomItem icon = new CustomItem(null, Material.SMOOTH_STONE, 0, -1, 1,"region", "$1" + id + " - " + name, null, null);
 
     public Region(Pair<Block, Block> positions, String name, int id) {
         this.positions = positions;
@@ -35,9 +34,9 @@ public class Region implements Listener {
     }
 
     public boolean isInRegion(Player p) {
-        int px = (int) p.getLocation().getX();
-        int py = (int) p.getLocation().getY();
-        int pz = (int) p.getLocation().getZ();
+        double px = p.getLocation().getX();
+        double py = p.getLocation().getY();
+        double pz = p.getLocation().getZ();
 
         int b1x = Math.min(positions.getKey().getX(), positions.getValue().getX());
         int b1y = Math.min(positions.getKey().getY(), positions.getValue().getY());
@@ -68,10 +67,6 @@ public class Region implements Listener {
 
     public Block getSecondPosition() {
         return positions.getValue();
-    }
-
-    public CustomItem getIcon() {
-        return icon;
     }
 
     public void visualize() {

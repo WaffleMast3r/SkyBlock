@@ -39,17 +39,65 @@ public class StyleFileTemplate {
         messages.put("RegionChatConfirmMessage", new CustomMessageContents() {
             @Override
             public String getText() {
-                return "%prefix% $0Apasa pe $4{0} $0pentru a creea regiunea, $1{1} $0pentru a selecta din nou si $2{2} $0pentru a anula actiunea";
+                return "%prefix% $3Ambele pozitii au fost selectate! Alege una din optiunile urmatoare pentru a incheia: $8{0} $5{1} $9{2}";
             }
 
             @Override
             public ArrayList<CustomMessage.Replacement> getReplacements() {
                 ArrayList<CustomMessage.Replacement> replacements = new ArrayList<>();
-                replacements.add(new CustomMessage.Replacement("{0}", "CONFIRM", new CustomMessage.EventMessage("RUN_COMMAND", "CONFIRM"), new CustomMessage.EventMessage("SHOW_TEXT", "Click Here to confirm")));
-                replacements.add(new CustomMessage.Replacement("{1}", "RESET", new CustomMessage.EventMessage("RUN_COMMAND", "RESET"), new CustomMessage.EventMessage("SHOW_TEXT", "Click Here to reset")));
-                replacements.add(new CustomMessage.Replacement("{2}", "CANCEL", new CustomMessage.EventMessage("RUN_COMMAND", "CANCEL"), new CustomMessage.EventMessage("SHOW_TEXT", "Click Here to cancel")));
+                replacements.add(new CustomMessage.Replacement("{0}", "[CONFIRM]", new CustomMessage.EventMessage("RUN_COMMAND", "CONFIRM"), new CustomMessage.EventMessage("SHOW_TEXT", "Click pentru a confirma")));
+                replacements.add(new CustomMessage.Replacement("{1}", "[RESET]", new CustomMessage.EventMessage("RUN_COMMAND", "RESET"), new CustomMessage.EventMessage("SHOW_TEXT", "Click pentru a o lua de la capat")));
+                replacements.add(new CustomMessage.Replacement("{2}", "[CANCEL]", new CustomMessage.EventMessage("RUN_COMMAND", "CANCEL"), new CustomMessage.EventMessage("SHOW_TEXT", "Click pentru a anula")));
 
                 return replacements;
+            }
+        });
+
+        messages.put("RegionChatConfirmedMessage", new CustomMessageContents() {
+            @Override
+            public String getText() {
+                return "%prefix% $8Regiunea $10{RegionName}$8 a fost creata cu success";
+            }
+
+            @Override
+            public ArrayList<CustomMessage.Replacement> getReplacements() {
+                return null;
+            }
+        });
+
+        messages.put("RegionChatCancelMessage", new CustomMessageContents() {
+            @Override
+            public String getText() {
+                return "%prefix% $8Ai anulat crearea regiunii";
+            }
+
+            @Override
+            public ArrayList<CustomMessage.Replacement> getReplacements() {
+                return null;
+            }
+        });
+
+        messages.put("RegionChatFirstMessage", new CustomMessageContents() {
+            @Override
+            public String getText() {
+                return "%prefix% $3Selecteaza prima pozitie a regiunii folosind click dreapta pe un block";
+            }
+
+            @Override
+            public ArrayList<CustomMessage.Replacement> getReplacements() {
+                return null;
+            }
+        });
+
+        messages.put("RegionChatSecondMessage", new CustomMessageContents() {
+            @Override
+            public String getText() {
+                return "%prefix% $3Selecteaza a doua pozitie a regiunii folosind click dreapta pe un block";
+            }
+
+            @Override
+            public ArrayList<CustomMessage.Replacement> getReplacements() {
+                return null;
             }
         });
 

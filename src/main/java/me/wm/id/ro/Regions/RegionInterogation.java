@@ -1,7 +1,7 @@
 package me.wm.id.ro.Regions;
 
 import me.wm.id.ro.Main;
-import org.bukkit.Bukkit;
+import me.wm.id.ro.util.Language.LanguageManager;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -22,7 +22,7 @@ public class RegionInterogation implements Listener {
         Main.getInstance().getServer().getPluginManager().registerEvents(this, Main.getInstance());
         stage = 0;
 
-        Bukkit.broadcastMessage("Select first Position");
+        LanguageManager.getInstance().sendMessage(p, "RegionChatFirstMessage");
     }
 
     @EventHandler
@@ -31,13 +31,11 @@ public class RegionInterogation implements Listener {
         e.setCancelled(true);
         if (stage == 0) {
             pos1 = e.getBlock();
-            Bukkit.broadcastMessage("Position 1 selected, select second position");
-            // TODO: 4/5/2019 Send message block selected
+            LanguageManager.getInstance().sendMessage(p, "RegionChatSecondMessage");
             stage++;
         } else if (stage == 1) {
             pos2 = e.getBlock();
-            Bukkit.broadcastMessage("Position 2 selected!");
-            // TODO: 4/5/2019 Send message block selected
+
             RegionInterogation inst = this;
             new RegionChatConfirm(p, new RegionChatConfirm.Action() {
                 @Override

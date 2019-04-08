@@ -69,6 +69,9 @@ public class RegionList extends EasyBrowserGUI<Region> {
                             @Override
                             public void run(Block pos1, Block pos2) {
                                 RegionManager.getInstance().createRegion(new Pair<>(pos1, pos2), s);
+                                HashMap<String, String> ph = new HashMap<>();
+                                ph.put("{RegionName}", s);
+                                LanguageManager.getInstance().sendMessage(p, "RegionChatConfirmedMessage", ph);
                             }
                         });
                     }
