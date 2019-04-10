@@ -6,15 +6,13 @@ import me.wm.id.ro.util.Location;
 import me.wm.id.ro.util.Updater.UpdateEvent;
 import me.wm.id.ro.util.Updater.UpdateTime;
 import me.wm.id.ro.util.WaffClass;
-import me.wm.id.ro.util.gui.CustomItem;
-import org.bukkit.Material;
 import org.bukkit.block.Block;
-import org.bukkit.entity.Player;
+import org.bukkit.craftbukkit.v1_13_R2.entity.CraftZombie;
+import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 
 public class Region implements Listener {
     private Pair<Block, Block> positions;
@@ -23,7 +21,8 @@ public class Region implements Listener {
     private int id;
     private boolean visualize = false;
 
-    private String enterMessage = "&bTest message";
+    private String enterMessage;
+    private ArrayList<Class<? extends LivingEntity>> entityBlacklist;
 
     public Region(Pair<Block, Block> positions, String name, int id) {
         this.positions = positions;
@@ -33,12 +32,17 @@ public class Region implements Listener {
         Main.getInstance().getServer().getPluginManager().registerEvents(this, Main.getInstance());
 
         properties = new ArrayList<>();
+        entityBlacklist = new ArrayList<>();
+
+        // TODO debug
+        properties.add(RegionProperties.PREVENT_ENTITIES);
+        entityBlacklist.add(CraftZombie.class);
     }
 
-    public boolean isInRegion(Player p) {
-        double px = p.getLocation().getX();
-        double py = p.getLocation().getY();
-        double pz = p.getLocation().getZ();
+    public boolean isInRegion(org.bukkit.Location loc) {
+        double px = loc.getX();
+        double py = loc.getY();
+        double pz = loc.getZ();
 
         int b1x = Math.min(positions.getKey().getX(), positions.getValue().getX());
         int b1y = Math.min(positions.getKey().getY(), positions.getValue().getY());
@@ -49,6 +53,10 @@ public class Region implements Listener {
         int b2z = Math.max(positions.getKey().getZ(), positions.getValue().getZ());
 
         return ((px >= b1x && px <= b2x) && (py >= b1y && py <= b2y) && (pz >= b1z && pz <= b2z));
+    }
+
+    public boolean isInRegion(Player p) {
+        return isInRegion(p.getLocation());
     }
 
     public boolean hasProperty(RegionProperties... props) {
@@ -153,15 +161,11 @@ public class Region implements Listener {
         }
     }
 
-    public String getPropertyMessageFor(RegionProperties prop) {
+    public Object getDataForProperty(RegionProperties prop) {
         final String name = prop.getPropName();
 
-        // TODO Add more prop name checks here if property has a message attribute
-        if(!name.equals("Enter Message")) return null;
-
-        if(enterMessage != null) {
-            return enterMessage;
-        }
+        if(name.contains("Enter Message") && enterMessage != null) return enterMessage;
+        if(name.contains("Prevent Entities")) return entityBlacklist;
 
         return null;
     }
@@ -174,8 +178,14 @@ public class Region implements Listener {
         if(!properties.contains(property)) properties.add(property);
 
         if(additionalData instanceof String) {
-            if(property.getPropName().equals("Enter Message")) {
+            if(property.getPropName().contains("Enter Message")) {
                 enterMessage = (String) additionalData;
+            }
+        }
+
+        if(additionalData instanceof Class) {
+            if(property.getPropName().contains("Prevent Entities")) {
+                entityBlacklist.add((Class) additionalData);
             }
         }
     }

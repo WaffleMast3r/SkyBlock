@@ -3,6 +3,7 @@ package me.wm.id.ro.Regions;
 import javafx.util.Pair;
 import me.wm.id.ro.Regions.listeners.enterMessage;
 import me.wm.id.ro.Regions.listeners.noPvP;
+import me.wm.id.ro.Regions.listeners.preventEntities;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
@@ -55,6 +56,7 @@ public class RegionManager {
         //activate Listeners
         new noPvP();
         Bukkit.getServer().getOnlinePlayers().forEach(i -> new enterMessage(i, 20));
+        new preventEntities();
 
     }
 

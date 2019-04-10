@@ -42,7 +42,7 @@ public class RegionPropertiesMenu extends EasyBrowserGUI<RegionProperties> {
         ph.put("{Status}", new Replacer() {
             @Override
             public String run() {
-                return region.hasProperty(paramOBJ) ? "Enabled" : "Disabled";
+                return region.hasProperty(paramOBJ) ? "$8Enabled" : "$9Disabled";
             }
         });
 

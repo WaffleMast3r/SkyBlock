@@ -218,7 +218,7 @@ public class StyleFileTemplate {
         guis.put("RegionPropertiesMenu", new GUIContents() {
             @Override
             public String title() {
-                return "Select what properties";
+                return "Select properties";
             }
 
             @Override

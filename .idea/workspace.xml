@@ -7,12 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdd09c32-d2bd-4482-bf95-620be94fc199" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/listeners/enterMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/listeners/preventEntities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/wm/id/ro/util/Events.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OceanBlock.jar" beforeDir="false" afterPath="$PROJECT_DIR$/OceanBlock.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/Region.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/Region.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/RegionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/RegionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/RegionProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/RegionProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/guis/RegionPropertiesMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/guis/RegionPropertiesMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/listeners/enterMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/listeners/enterMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/wm/id/ro/util/StyleFileTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/wm/id/ro/util/StyleFileTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/wm/id/ro/Regions/Region.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/wm/id/ro/Regions/Region.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/wm/id/ro/Regions/RegionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/wm/id/ro/Regions/RegionManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/wm/id/ro/Regions/guis/RegionPropertiesMenu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/wm/id/ro/Regions/guis/RegionPropertiesMenu$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/wm/id/ro/Regions/listeners/enterMessage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/wm/id/ro/Regions/listeners/enterMessage$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/wm/id/ro/Regions/listeners/enterMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/wm/id/ro/Regions/listeners/enterMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/wm/id/ro/util/StyleFileTemplate$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/wm/id/ro/util/StyleFileTemplate$11.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,15 +40,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/RegionInterogation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/Config.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
@@ -48,39 +49,14 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/guis/RegionOptions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="36" column="62" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/guis/RegionList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="65" column="29" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
-              <folding>
-                <element signature="e#1070#1071#0" expanded="true" />
-                <element signature="e#1127#1128#0" expanded="true" />
-                <element signature="e#1235#1236#0" expanded="true" />
-                <element signature="e#1295#1296#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/Region.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="25" column="51" lean-forward="true" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+            <state relative-caret-position="34">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
               <folding>
-                <element signature="e#6121#6122#0" expanded="true" />
+                <element signature="e#1096#1097#0" expanded="true" />
+                <element signature="e#1130#1131#0" expanded="true" />
+                <element signature="e#6310#6311#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,36 +65,57 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/RegionProperties.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="57" lean-forward="true" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+            <state relative-caret-position="493">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#799#800#0" expanded="true" />
+                <element signature="e#824#825#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/listeners/enterMessage.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/listeners/preventEntities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59">
-              <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+            <state relative-caret-position="357">
+              <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1366#1367#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/listeners/noPvP.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/listeners/enterMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+            <state relative-caret-position="170">
+              <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#523#1541#0" expanded="true" />
+                <element signature="e#1540#1541#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/util/StyleFileTemplate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="231" column="84" selection-start-line="231" selection-start-column="84" selection-end-line="231" selection-end-column="84" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/guis/RegionPropertiesMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -126,12 +123,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/RegionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="56" column="84" lean-forward="true" selection-start-line="56" selection-start-column="84" selection-end-line="56" selection-end-column="84" />
+            <state relative-caret-position="354">
+              <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#502#503#0" expanded="true" />
-                <element signature="e#533#534#0" expanded="true" />
+                <element signature="e#4419#4420#0" expanded="true" />
                 <element signature="e#4449#4450#0" expanded="true" />
               </folding>
             </state>
@@ -144,6 +140,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -165,7 +162,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/me/wm/id/ro/util/Language/Lang.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/wm/id/ro/util/Language/StyleFileConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/wm/id/ro/util/Updater/TaskManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/wm/id/ro/util/Comunications/Controller.java" />
@@ -202,7 +198,6 @@
         <option value="$PROJECT_DIR$/src/main/java/me/wm/id/ro/util/gui/EasyGUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/wm/id/ro/util/WaffClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/listeners/ChangeIcon.java" />
-        <option value="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/guis/RegionPropertiesMenu.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/wm/id/ro/util/Language/LanguageManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/wm/id/ro/util/ChatDialog.java" />
         <option value="$PROJECT_DIR$/src/main/resources/Config.yml" />
@@ -210,11 +205,14 @@
         <option value="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/guis/RegionOptions.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/guis/RegionList.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/RegionInterogation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/guis/RegionPropertiesMenu.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/wm/id/ro/util/StyleFileTemplate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/wm/id/ro/util/Events.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/RegionProperties.java" />
-        <option value="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/Region.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/RegionManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/listeners/enterMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/Region.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/listeners/preventEntities.java" />
       </list>
     </option>
   </component>
@@ -225,7 +223,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="377" />
     <option name="y" value="96" />
     <option name="width" value="1376" />
@@ -237,6 +235,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -338,7 +337,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -393,8 +391,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19537275" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16195373" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -402,7 +401,7 @@
       <window_info id="Favorites" order="5" show_stripe_button="false" side_tool="true" />
       <window_info id="Structure" order="6" show_stripe_button="false" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="0" weight="0.32936078" />
-      <window_info anchor="bottom" id="Messages" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Messages" order="1" weight="0.32839838" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.32839838" />
       <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.2156013" />
@@ -429,25 +428,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/util/Language/LanguageUpdateEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#418#419#0" expanded="true" />
-            <element signature="e#452#453#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.13.2-R0.1-SNAPSHOT/spigot-api-1.13.2-R0.1-20190326.095107-198.jar!/org/bukkit/command/defaults/BukkitCommand.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Chat/Formatting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/util/NMS/Versions/v1_13_R2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -721,13 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/guis/RegionPropertiesMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/util/Language/LanguageManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -739,64 +712,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/util/StyleFileTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="41" column="123" selection-start-line="41" selection-start-column="123" selection-end-line="41" selection-end-column="123" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/RegionChatConfirm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="33" column="62" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/RegionInterogation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/listeners/noPvP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/guis/RegionList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="65" column="29" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
-          <folding>
-            <element signature="e#1070#1071#0" expanded="true" />
-            <element signature="e#1127#1128#0" expanded="true" />
-            <element signature="e#1235#1236#0" expanded="true" />
-            <element signature="e#1295#1296#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/guis/RegionOptions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="36" column="62" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -817,34 +736,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/RegionProperties.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/RegionInterogation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="57" lean-forward="true" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+        <state relative-caret-position="51">
+          <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/guis/RegionOptions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="36" column="62" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/Region.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/guis/RegionList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="25" column="51" lean-forward="true" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+        <state relative-caret-position="850">
+          <caret line="65" column="29" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
           <folding>
-            <element signature="e#6121#6122#0" expanded="true" />
+            <element signature="e#1070#1071#0" expanded="true" />
+            <element signature="e#1127#1128#0" expanded="true" />
+            <element signature="e#1235#1236#0" expanded="true" />
+            <element signature="e#1295#1296#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/listeners/noPvP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/guis/RegionPropertiesMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/util/StyleFileTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="231" column="84" selection-start-line="231" selection-start-column="84" selection-end-line="231" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_201/src.zip!/java/util/function/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/util/Events.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="31" lean-forward="true" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1008#1009#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/RegionProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#824#825#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/RegionManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="56" column="84" lean-forward="true" selection-start-line="56" selection-start-column="84" selection-end-line="56" selection-end-column="84" />
+        <state relative-caret-position="354">
+          <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#502#503#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
+            <element signature="e#4419#4420#0" expanded="true" />
             <element signature="e#4449#4450#0" expanded="true" />
           </folding>
         </state>
@@ -852,11 +841,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/listeners/enterMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        <state relative-caret-position="170">
+          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1366#1367#0" expanded="true" />
+            <element signature="e#523#1541#0" expanded="true" />
+            <element signature="e#1540#1541#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/Region.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="e#1096#1097#0" expanded="true" />
+            <element signature="e#1130#1131#0" expanded="true" />
+            <element signature="e#6310#6311#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/wm/id/ro/Regions/listeners/preventEntities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

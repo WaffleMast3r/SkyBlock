@@ -7,7 +7,6 @@ import me.wm.id.ro.Regions.RegionManager;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
-import org.bukkit.scheduler.BukkitTask;
 
 import java.util.ArrayList;
 
@@ -32,12 +31,12 @@ public class enterMessage {
                 */
 
                 if(currentRegion != null && currentRegion.hasProperty(ENTER_MESSAGE) && !cooldown.contains(p)) {
-                    if(currentRegion.getPropertyMessageFor(ENTER_MESSAGE) == null) return;
-                    p.sendMessage(ChatColor.translateAlternateColorCodes('&', currentRegion.getPropertyMessageFor(ENTER_MESSAGE)));
+                    if(currentRegion.getDataForProperty(ENTER_MESSAGE) == null) return;
+                    p.sendMessage(ChatColor.translateAlternateColorCodes('&', (String) currentRegion.getDataForProperty(ENTER_MESSAGE)));
                     cooldown.add(p);
-                } else cooldown.remove(p);
+                } else if(currentRegion == null) cooldown.remove(p);
             }
-        }.runTaskTimer(Main.getInstance(), 20, delay);
+        }.runTaskTimer(Main.getInstance(), 0, delay);
     }
 
 }
