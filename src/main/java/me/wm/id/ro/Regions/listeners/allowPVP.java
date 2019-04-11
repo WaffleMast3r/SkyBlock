@@ -9,9 +9,9 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 
-public class noPvP implements Listener {
+public class allowPVP implements Listener {
 
-    public noPvP() {
+    public allowPVP() {
         Main.getInstance().getServer().getPluginManager().registerEvents(this, Main.getInstance());
     }
 

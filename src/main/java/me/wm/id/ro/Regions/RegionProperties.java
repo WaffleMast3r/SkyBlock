@@ -6,10 +6,13 @@ import org.bukkit.entity.Player;
 
 public enum RegionProperties {
 
-    NO_PVP(0,"$1No Pvp", Material.DIAMOND_SWORD, 1, 0),
-    NO_BUILD(1,"$1No Build", Material.STONE, 1, 0),
-    ENTER_MESSAGE(2,"$1Enter Message", Material.PAPER, 1, 0),
-    PREVENT_ENTITIES(3,"$1Prevent Entities", Material.ZOMBIE_HEAD, 1, 0);
+    NO_PVP(0,"$1no-pvp", Material.DIAMOND_SWORD, 1, 0),
+    NO_BUILD(1,"$1no-build", Material.STONE, 1, 0),
+    MESSAGE_ON_ENTRY(2,"$1message-on-entry", Material.PAPER, 1, 0),
+    MESSAGE_ON_LEAVE(3,"$1message-on-leave", Material.PAPER, 1, 0),
+    PREVENT_SPAWNING(4,"$1prevent-spawning", Material.ZOMBIE_HEAD, 1, 0),
+    ENTITY_SPAWNING(5, "$1entity-spawning", Material.ENDER_EYE, 1, 0),
+    PROTECT_TILE_ENTITIES(6, "$1protect-tile-entities", Material.PAINTING, 1, 0);
 
     private int ID;
     private String propName;

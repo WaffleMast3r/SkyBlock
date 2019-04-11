@@ -21,7 +21,8 @@ public class Region implements Listener {
     private int id;
     private boolean visualize = false;
 
-    private String enterMessage;
+    private String enterMessage = "";
+    private String leaveMessage = "";
     private ArrayList<Class<? extends LivingEntity>> entityBlacklist;
 
     public Region(Pair<Block, Block> positions, String name, int id) {
@@ -35,8 +36,8 @@ public class Region implements Listener {
         entityBlacklist = new ArrayList<>();
 
         // TODO debug
-        properties.add(RegionProperties.PREVENT_ENTITIES);
-        entityBlacklist.add(CraftZombie.class);
+        appendProperty(RegionProperties.MESSAGE_ON_ENTRY, "&bSalut cf?");
+        appendProperty(RegionProperties.PROTECT_TILE_ENTITIES);
     }
 
     public boolean isInRegion(org.bukkit.Location loc) {
@@ -164,8 +165,9 @@ public class Region implements Listener {
     public Object getDataForProperty(RegionProperties prop) {
         final String name = prop.getPropName();
 
-        if(name.contains("Enter Message") && enterMessage != null) return enterMessage;
-        if(name.contains("Prevent Entities")) return entityBlacklist;
+        if(name.contains("message-on-entry") && !enterMessage.equals("")) return enterMessage;
+        if(name.contains("message-on-leave") && !leaveMessage.equals("")) return leaveMessage;
+        if(name.contains("prevent-spawning")) return entityBlacklist;
 
         return null;
     }
@@ -178,13 +180,18 @@ public class Region implements Listener {
         if(!properties.contains(property)) properties.add(property);
 
         if(additionalData instanceof String) {
-            if(property.getPropName().contains("Enter Message")) {
+            if(property.getPropName().contains("message-on-entry")) {
                 enterMessage = (String) additionalData;
+            }
+
+
+            if(property.getPropName().contains("message-on-leave")) {
+                leaveMessage = (String) additionalData;
             }
         }
 
         if(additionalData instanceof Class) {
-            if(property.getPropName().contains("Prevent Entities")) {
+            if(property.getPropName().contains("prevent-spawning")) {
                 entityBlacklist.add((Class) additionalData);
             }
         }

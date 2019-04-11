@@ -55,50 +55,39 @@ public class StyleFileTemplate {
 
         messages.put("RegionChatConfirmedMessage", new CustomMessageContents() {
             @Override
-            public String getText() {
-                return "%prefix% $8Regiunea $10{RegionName}$8 a fost creata cu success";
-            }
-
+            public String getText() {return "%prefix% $8Regiunea $10{RegionName}$8 a fost creata cu success";}
             @Override
-            public ArrayList<CustomMessage.Replacement> getReplacements() {
-                return null;
-            }
+            public ArrayList<CustomMessage.Replacement> getReplacements() {return null;}
         });
 
         messages.put("RegionChatCancelMessage", new CustomMessageContents() {
             @Override
-            public String getText() {
-                return "%prefix% $8Ai anulat crearea regiunii";
-            }
-
+            public String getText() {return "%prefix% $8Ai anulat crearea regiunii";}
             @Override
-            public ArrayList<CustomMessage.Replacement> getReplacements() {
-                return null;
-            }
+            public ArrayList<CustomMessage.Replacement> getReplacements() {return null;}
         });
 
         messages.put("RegionChatFirstMessage", new CustomMessageContents() {
             @Override
-            public String getText() {
-                return "%prefix% $3Selecteaza prima pozitie a regiunii folosind click dreapta pe un block";
-            }
+            public String getText() {return "%prefix% $3Selecteaza prima pozitie a regiunii folosind click dreapta pe un block";}
+            @Override
+            public ArrayList<CustomMessage.Replacement> getReplacements() {return null;}
+        });
 
+        messages.put("RegionChatSecondMessage", new CustomMessageContents() {
+            @Override
+            public String getText() {return "%prefix% $3Selecteaza a doua pozitie a regiunii folosind click dreapta pe un block";}
             @Override
             public ArrayList<CustomMessage.Replacement> getReplacements() {
                 return null;
             }
         });
 
-        messages.put("RegionChatSecondMessage", new CustomMessageContents() {
+        messages.put("RegionChatWarn", new CustomMessageContents() {
             @Override
-            public String getText() {
-                return "%prefix% $3Selecteaza a doua pozitie a regiunii folosind click dreapta pe un block";
-            }
-
+            public String getText() {return "%prefix% $9Nu va este permis sa faceti aceasta actiune aici!";}
             @Override
-            public ArrayList<CustomMessage.Replacement> getReplacements() {
-                return null;
-            }
+            public ArrayList<CustomMessage.Replacement> getReplacements() { return null; }
         });
 
         return messages;
